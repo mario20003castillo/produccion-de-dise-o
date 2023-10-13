@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactividad y Animación CSS</title>
+    <style>
+        /* Estilos del botón interactivo */
+        .boton-interactivo {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        .boton-interactivo:hover {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        /* Estilos de la animación de carga */
+        .barra-carga {
+            width: 0;
+            height: 20px;
+            background-color: #27ae60;
+            animation: llenar 3s infinite;
+        }
+        @keyframes llenar {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+
+        /* Estilos de la tarjeta interactiva */
+        .tarjeta {
+            display: inline-block;
+            transform-origin: center bottom;
+            transition: transform 0.3s ease;
+        }
+        .tarjeta:hover {
+            transform: scale(1.1) rotate(10deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Botón interactivo -->
+    <button class="boton-interactivo">Familia!</button>
+
+    <!-- Animación de carga -->
+    <div class="barra-carga"></div>
+
+    <!-- Tarjeta interactiva -->
+    <div class="tarjeta">
+        <img src="familia.jpg" alt="familia.jpg">
+        <p>siempre seremos un equipo</p>
+    </div>
+</body>
+</html>
